@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>立体</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+	background:black;
+}
+.container{
+	height:100%;
+	position:relative;
+	transform-style:preserve-3d;
+	
+	animation:mydhua 10s ease 2s infinite;
+}
+.box{
+	width:200px;
+	height:200px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -100px;
+	line-height:200px;
+	text-align:center;
+	font-size:48px;
+	color:white;
+}
+.box1{
+	transform:rotateY(90deg) translateZ(-100px);
+	background:rgba(128,0,128,.5);
+}
+.box2{
+	transform:rotateY(90deg) translateZ(100px);
+	background:rgba(255,0,255,.5);
+}
+.box3{
+	transform:rotateX(90deg) translateZ(100px);
+	background:rgba(255,153,204,.5);
+}
+.box4{
+	transform:rotateX(90deg) translateZ(-100px);
+	background:rgba(128,0,128,.5);
+}
+.box5{
+	transform: translateZ(-100px);
+	background:rgba(153,204,255,.5);
+}
+.box6{
+	transform:translateZ(100px);
+	background:rgba(0,255,255,.5);
+}
+@keyframes mydhua{
+	0%{
+		transform-origin:center center;}
+	
+		100%{
+			transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+			transform-origin:center center;//旋转元素的基点位置
+
+		}
+}
+</style>
+</head>
+<body>
+	<div class="container">
+	
+		<div class="box1 box">1</div>
+		<div class="box2 box">2</div>
+		<div class="box3 box">3</div>
+		<div class="box4 box">4</div>
+		<div class="box5 box">5</div>
+		<div class="box6 box">6</div>
+	
+</body>
+</html>
