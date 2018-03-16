@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+<title>3d</title>
+<meta charset="utf-8">
+<style>
+.containet{
+	perspective:1200px;
+	width:45%;
+	float:left;
+}
+.box{
+	position:relative;
+	transform-style:preserve-3d;
+	transition:1s ease;
+	margin:10%;
+
+}
+.box img{
+	width:100%;
+	height:auto;
+}
+.text{
+
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	transform:rotateY(180deg) translateZ(1px);
+	color:#666;
+	text-align:center;
+	opacity:.06;
+	background:rgba(255,255,255,0.9);
+	transition:1s ;
+}
+.containet:hover .box{
+	transform:rotateY(180deg);
+}
+ .text{
+		opacity:1;
+}
+.box:after{
+	content:'';
+	display:block;
+	width:100%;
+	height:7vw;
+	transform:rotateX(90deg);
+	background-image:gradient(ellipse closest-side,rgba(0,0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+}
+</style>
+</head>
+<body>
+	<div class="containet">
+		<div class="box">
+			<img src="D:/照片/ps图片/下载.jpg" alt="xiaoniu"/>
+			<div class="text">
+				<h2>biaoti</h2>
+				<p>jianjieneirong</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
